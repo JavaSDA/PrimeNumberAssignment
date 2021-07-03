@@ -186,7 +186,7 @@ public class Main {
         // create a loop to run through from 1 - the upper limit and filter
         // the even numbers into the array
         int counter = 0;
-        for (int i = 0; i < evenNumbers.length; i++) {
+        for (int i = 0; i < upperLimit; i++) {
             if(i % 2 == 0) {
                 evenNumbers[counter] = i;
                 counter++;
