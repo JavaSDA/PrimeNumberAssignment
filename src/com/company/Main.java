@@ -195,6 +195,12 @@ public class Main {
 
         System.out.println(Arrays.toString(evenNumbers));
 
+
+
+        // Write a program that will take an array of numbers and sum all the values
+        // except the largest and smallest numbers.
+        // e.g [2, 9, 4, 10]
+
     }
 
     // Write a program to loop through from 1 - (number entered by user) that enters
