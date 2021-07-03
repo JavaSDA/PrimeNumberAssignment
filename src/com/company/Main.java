@@ -145,32 +145,56 @@ public class Main {
         // in an array and get the average.
         // average = sum of the values / number of values
 
-        // Initialize the scanner
+//        Ctrl or Command + /
+//         Initialize the scanner
+//        Scanner scanner = new Scanner(System.in);
+//
+//        // Prompt the user to enter the number of ages
+//        // In simple terms, this is telling the user to enter the size of the array
+//        System.out.print("Enter the number of ages to average: ");
+//        int numberOfAges = scanner.nextInt();
+//
+//        // initialize the ages array
+//        int[] ages = new int[numberOfAges];
+//
+//        // Loop through and tell the user to enter all the ages
+//        for (int i = 0; i < ages.length; i++) {
+//            System.out.print("Enter the next age: ");
+//            ages[i] = scanner.nextInt();
+//        }
+//
+//        // Find the sum
+//        double sum = 0;
+//
+//        for (int i = 0; i < ages.length; i++) {
+//            sum += ages[i]; // add the values of the array to the sum variable to give us the sum
+//        }
+//
+////        System.out.println("The average of the ages of the children is: " + sum / ages.length);
+//        System.out.println(Arrays.toString(ages));
+
+        // Initialize scanner
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt the user to enter the number of ages
-        // In simple terms, this is telling the user to enter the size of the array
-        System.out.print("Enter the number of ages to average: ");
-        int numberOfAges = scanner.nextInt();
+        // Ask the user to enter the upper limit
+        System.out.print("Enter the upper limit: ");
+        int upperLimit = scanner.nextInt();
 
-        // initialize the ages array
-        int[] ages = new int[numberOfAges];
+        // create an array with half the size of the upper limit + 1
+        int[] evenNumbers = new int[upperLimit/2];
 
-        // Loop through and tell the user to enter all the ages
-        for (int i = 0; i < ages.length; i++) {
-            System.out.print("Enter the next age: ");
-            ages[i] = scanner.nextInt();
+        // create a loop to run through from 1 - the upper limit and filter
+        // the even numbers into the array
+        int counter = 0;
+        for (int i = 0; i < evenNumbers.length; i++) {
+            if(i % 2 == 0) {
+                evenNumbers[counter] = i;
+                counter++;
+            }
         }
 
-        // Find the sum
-        double sum = 0;
+        System.out.println(Arrays.toString(evenNumbers));
 
-        for (int i = 0; i < ages.length; i++) {
-            sum += ages[i]; // add the values of the array to the sum variable to give us the sum
-        }
-
-//        System.out.println("The average of the ages of the children is: " + sum / ages.length);
-        System.out.println(Arrays.toString(ages));
     }
 
     // Write a program to loop through from 1 - (number entered by user) that enters
